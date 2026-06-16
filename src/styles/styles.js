@@ -1,21 +1,46 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  // Contenedor principal
+  // Contenedor principal: fondo gris claro
   container: {
     flex: 1,
     backgroundColor: '#f0f0f0',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+     paddingTop: 30,
     paddingHorizontal: 30,
   },
 
-  // Logo
+  // Wrapper del formulario completo
+formWrapper: {
+  width: '90%',
+  maxWidth: 400,
+  alignItems: 'center',
+},
+
+  // Card blanca que contiene el logo
+  logoCard: {
+    width: '100%',
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    paddingVertical: 24,
+    paddingHorizontal: 16,
+    alignItems: 'center',
+    marginBottom: 32,
+    // sombra Android
+    elevation: 2,
+    // sombra iOS
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+  },
+
+  // Logo dentro de la card
   logo: {
-    width: 220,
-    height: 100,
+    width: 260,
+    height: 110,
     resizeMode: 'contain',
-    marginBottom: 40,
   },
 
   // Inputs
@@ -75,6 +100,19 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
   },
+
+  linkText: {
+  color: '#7B2FBE',
+  fontWeight: '600',
+},
+
+loginCard: {
+  width: '100%',
+  backgroundColor: '#fff',
+  padding: 25,
+  borderRadius: 12,
+  elevation: 4,
+}
 });
 
 export default styles;

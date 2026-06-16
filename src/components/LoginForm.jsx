@@ -10,17 +10,19 @@ import styles from '../styles/styles';
  */
 const LoginForm = ({ username, setUsername, password, setPassword, onLogin }) => {
   return (
-    <View style={{ width: '100%', alignItems: 'center' }}>
+    <View style={styles.formWrapper}>
 
-      {/* Logo */}
-      <Image
-        source={{
-          uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png',
-        }}
-        style={styles.logo}
-        accessible={true}
-        accessibilityLabel="Logo Coca-Cola"
-      />
+      {/* Card blanca con el logo */}
+      <View style={styles.logoCard}>
+        <Image
+          source={{
+            uri: 'https://1000logos.net/wp-content/uploads/2021/05/Coca-Cola-logo.png',
+          }}
+          style={styles.logo}
+          accessible={true}
+          accessibilityLabel="Logo Coca-Cola"
+        />
+      </View>
 
       {/* Input usuario */}
       <TextInput
