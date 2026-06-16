@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
+
 import LoginForm from './src/components/LoginForm';
 import Message from './src/components/Message';
+import Header from './src/components/Header';
 import styles from './src/styles/styles';
 
 // Credenciales hardcodeadas (requisito del TP)
@@ -38,17 +40,21 @@ const handleLogin = () => {
     setMessage('Usuario o contraseña incorrectos, vuelva a intentar');
   }
 };
-  return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <LoginForm
-        username={username}
-        setUsername={setUsername}
-        password={password}
-        setPassword={setPassword}
-        onLogin={handleLogin}
-      />
-      <Message message={message} />
-    </View>
-  );
+return (
+  <View style={styles.container}>
+    <StatusBar style="auto" />
+
+    <Header />
+
+    <LoginForm
+      username={username}
+      setUsername={setUsername}
+      password={password}
+      setPassword={setPassword}
+      onLogin={handleLogin}
+    />
+
+    <Message message={message} />
+  </View>
+);
 }

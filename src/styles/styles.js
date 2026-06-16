@@ -2,20 +2,19 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   // Contenedor principal: fondo gris claro
-  container: {
-    flex: 1,
-    backgroundColor: '#f0f0f0',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-     paddingTop: 30,
-    paddingHorizontal: 30,
-  },
+container: {
+  flex: 1,
+  backgroundColor: '#f0f0f0',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+},
 
   // Wrapper del formulario completo
 formWrapper: {
-  width: '90%',
-  maxWidth: 400,
+  width: '100%',
   alignItems: 'center',
+  paddingHorizontal: 30,
+  marginTop: 30,
 },
 
   // Card blanca que contiene el logo
@@ -112,7 +111,21 @@ loginCard: {
   padding: 25,
   borderRadius: 12,
   elevation: 4,
-}
+},
+header: {
+  width: '100%',
+  backgroundColor: '#7B2FBE',
+  paddingVertical: 18,
+  borderRadius: 8,
+  marginBottom: 25,
+  alignItems: 'center',
+},
+
+headerTitle: {
+  color: '#fff',
+  fontSize: 22,
+  fontWeight: 'bold',
+},
 });
 
 export default styles;
